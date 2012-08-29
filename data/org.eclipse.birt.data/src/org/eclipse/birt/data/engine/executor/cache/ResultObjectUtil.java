@@ -423,8 +423,6 @@ public class ResultObjectUtil
 		}
 		else if ( fieldType.equals( Object.class ) || fieldType.equals( DataType.getClass( DataType.ANY_TYPE ) ) )
 		{
-			if ( !( fieldValue instanceof Serializable ) )
-				throw new DataException( ResourceConstants.NOT_SERIALIZABLE_CLASS, fieldValue.getClass().getName( ));
 			dos.write( leadingChar );
 			IOUtil.writeObject( dos, fieldValue );
 		}
